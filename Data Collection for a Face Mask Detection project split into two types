@@ -1,0 +1,82 @@
+Data Collection for a Face Mask Detection project split into two types:
+
+Data Collection
+
+Data collection is the process of gathering images required to train the face mask detection model.
+
+1. Manual Labeling
+Explanation
+
+Images are collected manually and assigned labels by a human.
+
+Labels
+Mask
+No Mask
+Example
+Image 1 → Mask
+Image 2 → No Mask
+Image 3 → Mask
+Advantages
+High accuracy
+Correct labeling
+Better model performance
+Disadvantages
+Time-consuming
+Requires human effort
+Use in Face Mask Detection
+
+Create two folders:
+
+dataset/
+│
+├── with_mask
+└── without_mask
+
+and manually place images in the correct folder.
+
+2. Random Data Collection
+Explanation
+
+Images are collected automatically from various sources.
+
+Sources
+Google Images
+Kaggle Datasets
+Open Images Dataset
+CCTV Images
+Internet Sources
+Example
+1000 Mask Images
+1000 No-Mask Images
+
+collected automatically.
+
+Advantages
+Fast collection
+Large dataset
+Less manual effort
+Disadvantages
+May contain wrong labels
+Duplicate images
+Noisy data
+Use in Face Mask Detection
+
+Download mask and no-mask images from online datasets and then clean them before training.
+
+Face Mask Detection Data Collection Flow
+Data Collection
+      │
+      ├── Manual Labeling
+      │      ├── Mask
+      │      └── No Mask
+      │
+      └── Random Data Collection
+             ├── Internet Images
+             ├── Kaggle Dataset
+             └── Google Images
+5-Point Exam Answer
+Data collection is the first step in face mask detection.
+Images can be collected through manual labeling or random data collection.
+Manual labeling assigns correct labels such as Mask and No Mask.
+Random data collection gathers images from datasets and online sources.
+The collected images are used to train the deep learning model for mask classification.
