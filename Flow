@@ -1,0 +1,212 @@
+Face Mask Detection using Deep Learning (CNN + OpenCV) project structure. Here's what each file/folder is used for:
+
+| File / Folder              | Purpose                                                                                                              |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **dataset/**               | Contains training images used to train the model. Usually has `with_mask` and `without_mask` folders.                |
+| **face_detector/**         | Contains OpenCV face detection model files (Caffe/TensorFlow model) used to detect faces before mask classification. |
+| **images/**                | Stores sample test images used for prediction and demonstration.                                                     |
+| **Realtime_images/**       | Stores screenshots or images captured during real-time webcam detection.                                             |
+| **.gitignore**             | Tells Git which files/folders should not be uploaded to GitHub.                                                      |
+| **CODE_OF_CONDUCT.md**     | Project guidelines and rules for contributors.                                                                       |
+| **detect_mask_image.py**   | Detects faces and predicts mask/no-mask from a single image.                                                         |
+| **detect_mask_video.py**   | Detects masks in a video file frame-by-frame.                                                                        |
+| **LICENSE**                | Legal permission document describing how others can use the project.                                                 |
+| **mask_detector.model**    | Trained deep learning model used for mask classification. This is the final output after training.                   |
+| **plot.png**               | Training graph showing Accuracy and Loss curves during model training.                                               |
+| **README.md**              | Project documentation explaining installation, usage, dataset, and results.                                          |
+| **requirements.txt**       | List of Python libraries required to run the project.                                                                |
+| **search.py**              | Utility script, usually used for testing, searching, or image processing tasks.                                      |
+| **train_mask_detector.py** | Main training script that trains the CNN model using the dataset and generates `mask_detector.model`.                |
+
+
+=====================
+
+
+1. dataset/ (Folder)
+Purpose
+
+Contains the images used for training the model.
+
+Typical Structure
+dataset/
+│
+├── with_mask/
+│     ├── image1.jpg
+│     ├── image2.jpg
+│
+└── without_mask/
+      ├── image1.jpg
+      ├── image2.jpg
+Use
+Provides training data.
+Teaches the model the difference between mask and no-mask faces.
+2. plot.png
+Purpose
+
+Training performance graph.
+
+Shows
+Accuracy Curve
+Loss Curve
+Use
+
+Helps analyze:
+
+Model performance
+Overfitting
+Underfitting
+3. mask_detector.model
+Purpose
+
+Trained Deep Learning Model.
+
+Size
+
+11 MB
+
+Use
+
+Stores:
+
+Learned weights
+Features
+Classification knowledge
+
+Output of:
+
+train_mask_detector.py
+
+Input for:
+
+detect_mask_image.py
+detect_mask_video.py
+4. detect_mask_video.py
+Purpose
+
+Detect face masks from a webcam or video.
+
+Input
+Video
+Webcam
+Output
+Mask
+No Mask
+
+Real-time detection.
+
+Use
+CCTV monitoring
+Public safety systems
+Entry screening systems
+5. train_mask_detector.py
+Purpose
+
+Main training script.
+
+Functions
+Load images
+Preprocess images
+Create labels
+Train CNN/MobileNet model
+Save model
+Output
+mask_detector.model
+6. search.py
+Purpose
+
+Helper/Utility Script.
+
+Possible Uses
+Search images
+Testing functions
+Dataset verification
+Debugging
+Note
+
+This file is not usually the main part of the project.
+
+7. requirements.txt
+Purpose
+
+List of required Python libraries.
+
+Example
+tensorflow
+opencv-python
+numpy
+matplotlib
+scikit-learn
+Installation
+pip install -r requirements.txt
+8. README.md
+Purpose
+
+Project Documentation.
+
+Contains
+Project overview
+Installation steps
+Usage instructions
+Dataset information
+Output screenshots
+Use
+
+First file to read when opening the project.
+
+9. LICENSE
+Purpose
+
+Legal permission document.
+
+Use
+
+Defines:
+
+Who can use the project
+Modification rights
+Distribution rights
+10. detect_mask_image.py
+Purpose
+
+Detect face masks from a single image.
+
+Input
+person.jpg
+Output
+Mask
+or
+No Mask
+Use
+
+Image-based testing.
+
+11. CODE_OF_CONDUCT.md
+Purpose
+
+Community guidelines for contributors.
+
+Contains
+Contribution rules
+Behavior guidelines
+Open-source standards
+Use
+
+Important when the project is hosted on GitHub.
+
+Project Workflow
+dataset/
+     ↓
+train_mask_detector.py
+     ↓
+mask_detector.model
+     ↓
+detect_mask_image.py
+           OR
+detect_mask_video.py
+     ↓
+Mask / No Mask Prediction
+
+Viva / Interview Answer
+
+The Face Mask Detection project uses images stored in the dataset folder to train a deep learning model through train_mask_detector.py. The trained model is saved as mask_detector.model. The files detect_mask_image.py and detect_mask_video.py use this model to detect whether a person is wearing a mask from images or real-time video. The remaining files provide documentation, dependencies, training graphs, and project guidelines.
+
