@@ -80,3 +80,45 @@ Images can be collected through manual labeling or random data collection.
 Manual labeling assigns correct labels such as Mask and No Mask.
 Random data collection gathers images from datasets and online sources.
 The collected images are used to train the deep learning model for mask classification.
+
+
+=========
+
+In a Face Mask Detection Project, the dataset folder is the data collection folder.
+
+Dataset Folder Structure
+dataset/
+│
+├── with_mask/
+│      ├── image1.jpg
+│      ├── image2.jpg
+│      ├── image3.jpg
+│
+└── without_mask/
+       ├── image1.jpg
+       ├── image2.jpg
+       ├── image3.jpg
+Explanation
+with_mask Folder
+Contains images of people wearing face masks.
+Label = Mask
+without_mask Folder
+Contains images of people not wearing face masks.
+Label = No Mask
+Purpose
+Acts as the data collection repository.
+Provides training data for the model.
+Used by train_mask_detector.py during training.
+Workflow
+Data Collection
+       ↓
+dataset/
+       ↓
+train_mask_detector.py
+       ↓
+mask_detector.model
+       ↓
+Prediction (Mask / No Mask)
+Short Exam Answer
+
+The dataset folder is the data collection folder in a Face Mask Detection project. It contains images categorized into with_mask and without_mask folders, which are used to train the deep learning model.
